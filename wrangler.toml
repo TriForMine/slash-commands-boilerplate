@@ -1,0 +1,3 @@
+name = "slash-commands-boilerplate"
+type = "javascript"
+workers_dev = true
