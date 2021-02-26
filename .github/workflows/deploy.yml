@@ -1,19 +1,16 @@
-name: Deploy
-
+name: Build
 on:
   push:
-    branches:
-      - master
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    name: Deploy
-    steps:
-      - uses: actions/checkout@v2
-      - name: Publish
-        uses: cloudflare/wrangler-action@1.3.0
-        with:
-          apiToken: ${{ secrets.CF_API_TOKEN }}
-        env:
-          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+  pull_request:
+  repository_dispatch:
+deploy:
+  runs-on: ubuntu-latest
+  name: Deploy
+  steps:
+    - uses: actions/checkout@v2
+    - name: Publish
+      uses: cloudflare/wrangler-action@1.3.0
+      with:
+        apiToken: ${{ secrets.CF_API_TOKEN }}
+      env:
+        CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
