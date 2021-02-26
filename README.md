@@ -16,6 +16,8 @@ As this is currently, not finalized please expect breaking changes. A much bette
 
 Deploy your code to any serverless platform.
 
+[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/discordeno/slash-commands-boilerplate)
+
 ## Contributions
 
 Please help contribute as much as possible by sending pull requests. Thank you!
